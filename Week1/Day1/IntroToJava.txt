@@ -43,12 +43,83 @@ Introduction to Java
 		Create our first Hello World program!
 
 
-Control Flow statments: 
+	Primitives: 
+		A simple data type like an int or a char.
+
+		int - 32 bits
+		char -  16 bits
+		boolean - 1 bit (or a byte)
+		byte - 8 bits 
+		short - 16 bits
+		double - 64 bits/byte 
+		float - 32 bits/byte (less precise, but less memory)
+		long - 64 bits
+
+
+	Control Flow statments: 
 	
-	Control flow statements will affect the flow of how your code will be executed. 
-	They allow you to repeat blocks of code or ignore it, depending on what logic 
-	you've implemented. 	
+		Control flow statements will affect the flow of how your code will be executed. 
+		They allow you to repeat blocks of code or ignore it, depending on what logic 
+		you've implemented. 
+
+		if statement (can't use break statement)
+
+			if([condition that will evaluate to a boolean]){
+
+				code block if condition evaluates to true
+
+			} else if([condition that will evaluate to a boolean]){
+
+				prior if or else if conditions evaluate to false 
+				code block else if condition evaluates to true
+
+			} else {
+				only trigger if no other conditions have been met 
+			}
+
+
+		while statement and do while statement
+
+			while([condition that will evaluate to a boolean]){
+
+				keeps executing as long as condition evalues to true. 
+
+				A while loop is very similar to a for loop and is more general. 
+				In fact, you can create a for loop using a while loop. 
+
+				You can break out of a while loop using "break", which will end the loop at that exact point!
+			}
+	
+			do while is basically the same as a while loop, but it will execute at least once, 
+				even if the condition has not been met.
+
+		switch statement
+
+			Why can't it be double? 
+				precision can't be guaranteed. some comparing 2 doubles is very difficult. 
+				instead we can only use int, because they're much easier to compare. 
+				Also true for char and String. 
+
+			switch([Expression is either a String or a int]){
+
+				case [An expression of the same datatype that it will compare the expression to. ]:
+					This block of code will execute if expression matches. 
+
+					break; This will escape the entire switch block. 
+
+				case [An expression of the same datatype that it will compare the expression to. ]:
+					This block of code will execute if expression matches. Also execute if previous 
+					cases have been met. 
+
+				default: 
+					Will execute if none of the cases have been met or if one of the cases have been met. 
+			}
+
+
+
+		for statement	
 			
+			We'll do this tomorrow. 
 
 
 
