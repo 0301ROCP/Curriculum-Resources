@@ -55,7 +55,7 @@ public class ExampleSwitch {
 //		}
 				
 				
-		String favouriteColour = "Blue";
+		String favouriteColour = "Purple";
 //		
 			switch(favouriteColour) {
 				case "Green":
