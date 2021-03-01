@@ -1,0 +1,58 @@
+Introduction to Java
+
+	What is Java?
+		Common languages for most websites? 
+		Operating system? 
+		Object Oriented Programming? 
+		Strongly typed? 
+		A language? 
+		Write Once Run Anywhere? 
+		Compiled? 
+
+		What is it and why do we use it? ? 
+			Java is a compiled programming language. It is supported by Oracle and allows us
+			to create robust enterprise level applications. 
+			Java supports OOP - so we get all the benefits of OOP. 
+			Compiled - which means that we have really nice debuggins situations. 
+			WORA - Write Once Run Anywhere, anything that can host the JVM will allow us to 
+				run Java code. 
+			A large list of frameworks and rich documentation - is good!
+			C-based : it is easier to pick up 
+			Garbage Collection - automated memory management. 
+			
+
+		How does it work? 
+			Pure magic. Also thanks to the JVM converting bytecode into 
+			machine code.  
+
+			JDK JRE JVM 
+				JDK: Java Development Kit 
+					Is what we will need to create Java code! The JDK contains 
+					the JRE (and the JVM) and other tools such as the debugger and 
+					the compiler! 
+				(The compiler converts our human readable code to bytecode - which 
+				is then translated by the JVM)
+
+				JRE: Java Runtime Environment 
+					Allows us to run Java code. It contains the JVM and core libraries.
+
+				JVM: Java Virtual Machine 
+					Translates Bytecode (machine-readable language) to machine code. 
+
+
+		Create our first Hello World program!
+
+
+Control Flow statments: 
+	
+	Control flow statements will affect the flow of how your code will be executed. 
+	They allow you to repeat blocks of code or ignore it, depending on what logic 
+	you've implemented. 	
+			
+
+
+
+
+
+
+		

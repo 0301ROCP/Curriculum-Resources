@@ -1,0 +1,19 @@
+Hello Everyone!
+
+
+Linux commands:
+
+	clear - will just clear the terminal 
+
+	cd <arg-1> - changes directory
+		navigate to a parent directory ? ..
+		navigate to home directory? ~
+		navigate to the base root directory? /
+
+	ls - lists all the files and folders we have.
+
+	touch <arg-1> - creates a new file "name"."extemsopm"
+
+	mv <arg-1> <arg-2>  - Move something from <arg-1> to another location, <arg-2>
+
+	vim - allows us to edit files from the terminal! 
