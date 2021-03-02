@@ -79,7 +79,16 @@ public class Driver {
 //		myHuman2.givingDetails();
 		
 		myHuman.pimpMyShoes();
-		myHuman.showOfMyShoes();
+//		myHuman.showOfMyShoes();
+		
+		int[] myNumbers = {10,20,30,40,0,100};
+		
+		int sum = myHuman.onlyAddInts(myNumbers); //this is a method invocation line, it will only accept the correct arguments
+		
+		double myDoubleSum = myHuman.addMyArgs(10,20,30,40,50);
+		
+		System.out.println(sum);
+		System.out.println(myDoubleSum);
 		
 //		myHuman3.name = "Franky";
 		

@@ -51,5 +51,27 @@ public class Human {
 		}
 		
 	}
+	
+	int onlyAddInts(int[] myNumberArray) {
+		
+		int sum = 0;
+		
+		for(int i: myNumberArray) {
+			sum = sum + i;
+		}
+		return sum ;
+	}
+	
+	//Var-args: variable-length arguments
+	double addMyArgs(int... myNumberArray) {
+		
+		int sum = 0;
+		
+		for(int i: myNumberArray) {
+			sum = sum + i;
+		}
+		
+		return sum;
+	}
 
 }
