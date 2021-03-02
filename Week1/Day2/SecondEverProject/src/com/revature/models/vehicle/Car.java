@@ -94,10 +94,10 @@ public class Car {
 	}
 	
 	//var-args have to be at the very right of the method arguments. (can't have multiple var-args)
-	int addNumbers(int r, String... r1, int...a ) {
-		System.out.println("Inside var args calculator!");
-		return 2;
-	}
+//	int addNumbers(int r, String... r1, int...a ) {
+//		System.out.println("Inside var args calculator!");
+//		return 2;
+//	}
 	
 	double numberOperator(int operation, int...a) {
 		double total = 0;

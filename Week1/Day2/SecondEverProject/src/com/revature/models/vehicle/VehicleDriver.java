@@ -15,7 +15,7 @@ public class VehicleDriver {
 		myCar.addNumbers(10,20,30);
 		
 		myCar.addNumbers(1);
-		myCar.addNumbers(10,1,2,3,4,5,6);
+//		myCar.addNumbers(10,1,2,3,4,5,6);
 		
 //		System.out.println(myCar.makeAndModel);
 //		System.out.println(myOtherCar.makeAndModel);

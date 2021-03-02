@@ -1,0 +1,29 @@
+Day 2 Review:
+
+	What is an Object vs Class?
+	
+	What are the properties and behaviours of an object?
+	
+	What does a method consist of and what does a constructor consist of? 	
+
+	Difference between a method and a constructor?
+	
+	method overloading 
+
+	var-args	
+
+	What is an array?
+
+	enhanced for loop!
+
+
+mini challenges 
+
+	Inside of the planet
+
+	When a planet crashes into a bigger planet, it should lose 90% of it's mass and the bigger object should only lose 10%. 
+
+	I'd like you to have a go at tusing a constructor inside a consturcotr! save some code!
+
+	Create multiple orbit methods that return different values!. 
+
