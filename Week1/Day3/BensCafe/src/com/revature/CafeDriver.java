@@ -9,6 +9,8 @@ public class CafeDriver {
 	static MenuItems[] preppingFood() {
 		
 		MenuItems[] listOfItems = new MenuItems[5];
+		int[] a;
+		Object[] b; 
 		
 		MenuItems scones = new MenuItems(2,"Scone",true);
 		MenuItems cupcakes = new MenuItems(2,"Cupcakes",true);
@@ -27,7 +29,7 @@ public class CafeDriver {
 	}
 	
 	static void greetinCustomer(MenuItems[] myMenu) {
-		System.out.println("Hello to my Cafe, here's the list of items: ");
+		System.out.println("Welcome to my Cafe, here's the list of items: ");
 		
 		for(MenuItems i: myMenu) {
 			System.out.println("Food: " + i.name + " | Price: $" + i.price);
@@ -43,7 +45,7 @@ public class CafeDriver {
 		MenuItems[] myMenu = preppingFood();
 		
 		
-		//provide an interface for the customer
+		//provide an interactive menu for the customer
 		greetinCustomer(myMenu);
 		
 		//allow them to order and track it 
