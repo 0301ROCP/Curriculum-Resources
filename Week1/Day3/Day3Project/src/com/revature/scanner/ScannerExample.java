@@ -2,7 +2,9 @@ package com.revature.scanner;
 
 import java.util.Scanner; //we are importing from the java/utilities, specifically Scanner class
 
-import com.revature.strings.Potatoe;
+import com.revature.scopes.Potatoe; //fully qualified name
+
+
 
 //import java.util.*; //This will import everything from the util package!
 
@@ -18,7 +20,8 @@ public class ScannerExample {
 		 */
 		
 		Potatoe p = new Potatoe();
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); //Scanner does not have a no-args constructor. 
+											//System.in tells the scanner to accept inputs from the terminal 
 		boolean menuIsActive = true;
 		
 		
