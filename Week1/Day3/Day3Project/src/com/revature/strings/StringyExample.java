@@ -15,6 +15,43 @@ public class StringyExample {
 	 *  	(Which is also within the heap)
 	 */
 	
+	
+	void stringyBehaviour() {
+		
+		String a = "apples";
+		String a1 = "apples";
+		String a2 = "apples";
+		String a3 = "apples";
+		String a4 = "apples";
+		String a5 = "apples";
+		String a6 = "apples";
+		String a7 = "apples";
+		
+		String copyA = "apples";
+		String copyB = new String("apples");
+		
+		String newString = a1 + a2; // this works fine!
+		
+		System.out.println(copyA); System.out.println(copyA.toString());
+		
+		
+		Object o = new Object();
+		
+		Object objCopyA = o;
+		Object objCopyB = new Object();
+		
+		System.out.println(o); System.out.println(o.toString());
+		
+		
+		Potatoe yelllo = new Potatoe();
+		Potatoe sweet = new Potatoe();
+		
+//		Potatoe combined = yelllo + sweet;
+//		System.out.println(combined.toString());
+		
+		
+	}
+	
 	public static void main(String[] apples) {
 		
 		String myString = "This is my String!"; 
@@ -40,15 +77,15 @@ public class StringyExample {
 //		System.out.println(a.toLowerCase());
 //		System.out.println(a.toUpperCase());
 		
-		a = a.substring(6); // 1 argument substring method
-		a = a.substring(6,12); // starting and ending point!
-		
-		
-		a.concat(" ");
-		a.split(" ");
-		a.isEmpty();
-		
-		System.out.println(a);
+//		a = a.substring(6); // 1 argument substring method
+//		a = a.substring(6,12); // starting and ending point!
+//		
+//		
+//		a.concat(" ");
+//		a.split(" ");
+//		a.isEmpty();
+//		
+//		System.out.println(a);
 		
 		
 		
