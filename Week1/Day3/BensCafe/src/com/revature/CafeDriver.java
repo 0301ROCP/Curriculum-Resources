@@ -6,6 +6,16 @@ import com.revature.models.MenuItems;
 
 public class CafeDriver {
 	
+	/*
+	 * What would be useful data stuctures to have?
+	 * 
+	 * 	SET
+	 * 
+	 * 	LIST
+	 * 
+	 * 	MAP 
+	 */
+	
 	static MenuItems[] preppingFood() {
 		
 		MenuItems[] listOfItems = new MenuItems[5];
