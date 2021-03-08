@@ -83,13 +83,4 @@
   - Design Pattern: Data Access Object
   - Datasource: Properties, Environment Variables, JDBC URL
 
-- [PL/pgSQL](https://www.postgresql.org/docs/9.6/plpgsql.html)
-  - Function
-    - Scalar
-    - Aggregate
-  - Stored Procedure
-  - Cursors
-  - Index
-  - View
-  - Sequence
-  - Trigger
+
