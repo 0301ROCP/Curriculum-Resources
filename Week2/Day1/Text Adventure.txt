@@ -1,0 +1,12 @@
+Text Adventure game (House tour)
+
+You're going to simulate a house, with at least 
+	a bedroom, living room, kitchen and a bathroom. 
+
+At the start, you'll start outside the house. 
+
+User's are able to enter rooms using words such as:
+	"left", "right", "front" and "backward"
+
+(No option to teleport into a room, i.e. to enter 
+	the kitchen, you should have to walk through the living room)
