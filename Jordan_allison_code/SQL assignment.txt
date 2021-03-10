@@ -1,0 +1,78 @@
+create table if not exists planets( --We've create a table, planets, with a single column, planet_id
+--  <column name>  <data-type> <constraint1> <constraint2> ... ,
+	planet_id serial primary key, --primary key column are used to select a particular record 
+	planet_name varchar(30) not null,
+	planet_description varchar(60) not null unique,
+	has_rings boolean,
+	number_of_moons smallint check(number_of_moons > -1)
+);
+-- NOT DDL COMMANDS BELOW-------------------------------------------------------
+
+
+
+insert into planets (planet_name, planet_description, has_rings, number_of_moons) values 
+	('Mercury', 'Never too close', true, 0),
+	('Venus', 'Getting a tad warm', false, 0),
+	('Earth', 'cradle of civilization', false, 1),
+	('Mars', 'Earth 2.0', false, 2),
+	('Jupiter', 'Big', true, 67),
+	('Saturn', 'very ringy', true, 82),
+	('Uranus', 'blue', true, 27),
+	('Neptune', 'getting nippy', true, 14),
+	('Pluto', 'not a real planet, only a dwarf planet', false, 2);
+	
+
+
+
+--1st question
+
+select * from planets;
+
+-- 2nd question
+
+select * from planets where planet_name = 'Jupiter';
+
+
+-- 3rd question
+
+select * from planets where has_rings = true;
+
+
+--4th question
+
+select * from planets order by number_of_moons desc;
+
+----5th question
+
+select * from planets order by planet_name;
+
+--6th question
+
+alter table planets alter column planet_description drop not null;
+
+insert into planets (planet_name, has_rings, number_of_moons) values 
+	('Zues', true, 67);
+
+--7th quesion
+
+update planets set has_rings = false where planet_name = 'Mercury';
+
+--8th question
+
+select * from planets where planet_name like '%a%';
+
+--9th question
+
+select * from planets where planet_name like 'M%';
+
+--10th question
+
+select * from planets where planet_name like '__r%';
+
+--11th question
+
+delete from planets where planet_name = 'Pluto';
+
+
+select now();
+
