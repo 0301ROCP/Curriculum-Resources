@@ -1,0 +1,72 @@
+--2.1 SELECT
+--Task – Select all records from the Employee table.
+
+select * from employee e;
+
+--Task – Select all records from the Employee table where last name is King.
+
+select * from employee e where last_name = 'King';
+
+--Task – Select all records from the Employee table where first name is Andrew and REPORTSTO is NULL.
+
+select * from employee e where first_name = 'Andrew' and reports_to is null;
+
+--2.2 ORDER BY
+
+--Task – Select all albums in Album table and sort result set in descending order by title.
+
+select * from album a order by title desc;
+
+--Task – Select first name from Customer and sort result set in ascending order by city
+
+select first_name from customer c order by city asc;
+
+--2.3 INSERT INTO
+
+--Task – Insert two new records into Genre table
+
+insert into genre (name) values ('Swee bop') , ('Dance pop');
+
+--Task – Insert two new records into Employee table
+
+insert into employee (first_name, last_name, email) values ('Thorn', 'Galbreath', 'tg@ny.com') 
+, ('Nico' , 'Robin', 'nr@goingmerry.jp');
+
+--Task – Insert two new records into Customer table
+
+insert into customer (first_name, last_name, email) values ('Thorn', 'Galbreath', 'tg@ny.com') 
+, ('Nico' , 'Robin', 'nr@goingmerry.jp');
+
+--2.4 UPDATE
+--Task – Update Aaron Mitchell in Customer table to Robert Walter
+
+update customer set first_name = 'Robert', last_name ='Walter' 
+where first_name ='Aaron' and last_name = 'Mitchell';
+
+--Task – Update name of artist in the Artist table “Creedence Clearwater Revival” to “CCR”
+
+update artist set "name" = 'CCR' where "name" = 'Creedence Clearwater Revival';
+
+--2.5 LIKE
+
+--Task – Select all invoices with a billing address like “T%”
+
+select * from invoice where billing_address like 'T%';
+
+--2.6 BETWEEN
+
+--Task – Select all invoices that have a total between 15 and 50
+
+select * from invoice_line where total between 15 and 50;
+
+--Task – Select all employees hired between 1st of June 2003 and 1st of March 2004
+
+select * from employee e2 where hire_date between '2003-06-01' and '2004-03-01';
+
+--2.7 DELETE
+
+--Task – Delete a record in Customer table where the name is Robert Walter (There may be constraints that rely on this, find out how to resolve them).
+
+alter table invoice drop constraint fk_invoice_customer_id;
+
+delete from customer where first_name ='Robert' and last_name ='Walter';
