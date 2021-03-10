@@ -1,0 +1,53 @@
+Properties of a Transaction
+ACID:
+
+Atomicity: All the queries execute or none of them execute!
+
+Consistency: Does not violate referential integrity 
+		(table structures aren't changed)
+
+Isolated: Transactions don't intefere with each other. 
+	(Different levels of isolation)
+
+Durable: Data persists! (Changes to the databse still exist
+		even if the local version of it breaks). 
+
+
+
+
+Isolation levels: 
+	Read uncommitted : it's not isolated at all. It will not
+		stop any of the read phenomenas. By default, Postgres does
+		not allow this option. 
+		VERY INCOSISTENT
+
+	Read committed: default isolation level in PostgreSQL. 
+		Transactions only see committed data! 
+		Write only locks.  (recommended for very long transactions)
+	
+	Repeatable reads :
+		(not used often), Read/Write locks, allows phantom reads
+		but stops non-repeatable phenomena
+	
+	Serializable:
+		Read/Write locks 
+		Applies Range locks in the WHERE clause of a select stttement. 
+		Tables that are being read, can't be modified until the reading is done!
+		(no INSERTS, no UPDATES, no DELETES).
+				
+
+Read phenomena (Bad things) 
+	Dirty read: reading data that is uncommitted. 
+	Non-repeatable read: when a row is read twice in a transaction 
+		and the values are different. 
+	Phantom read: reading datat that is being added or 
+		mordified by a running transaction. 
+
+
+	Isolation levels	dirty read	non-re		phantom
+	uncommitted		allows		allows		allows
+	committed		not allowed	allow		allow
+	repeatable		not allowed	not allowed 	allow (but not in PG)
+	serialiaable 		not allowed 	not allowed 	not allowed
+
+
