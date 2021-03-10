@@ -1,0 +1,60 @@
+SQL
+	Structured Query Language 
+	Used to manipulate our database. 
+
+Sublangauges within SQL:
+	DML (Data Manipulation Language);
+		Manipulate the data that is stored within your table 
+		CRUD - Create, Read, Update and Delete
+		Postgres (SQL) 
+
+		INSERT 
+		SELECT 
+		UPDATE  
+		DELETE 
+
+	DDL ( Data Definition Language)
+	Modify the structure of the table 
+
+		CREATE
+		DROP 
+		TRUNCATE
+		ALTER 
+
+	DQL (Data Query Language)
+	Philosiphy that a select statement, does not manipulate a table. 	
+
+		SELECT 
+
+	DCL (Data Control Language)
+	The commands that control the access for db users. 
+
+		GRANT
+		REVOKE
+
+	TCL 
+
+
+
+DQL Clauses: 
+	Clauses are additional filters that you add to a query, 
+	to be more specific. 
+
+	WHERE : filtering based on a condition, acts on single records
+	HAVING : also a filtering, but used after a group by. 
+		(acts on a group)
+
+
+Functions 
+	Reusuable block of code. Something that may take in a value and return 
+	a processed value. 
+
+	scalar functions: 
+		Act on a single record, return a single value 
+		UPPERCASE
+		LOWERCASE
+
+	Agregate functions: 
+		Act on a group of records, and return a single value 
+		MAX
+		MIN 
