@@ -25,7 +25,7 @@ select * from planets ;
 select planet_name from planets where planet_name = 'Jupiter';
 
 --3)Select all the planets with rings;
-select planet_name, has_rings from planets where has_rings = true;
+select * from planets where has_rings = true;
 
 --4)Select all the planets, descending by the number of moons
 select planet_name, number_of_moons from planets order by number_of_moons desc;
@@ -42,18 +42,19 @@ insert into planets (planet_name, planet_description, has_rings, number_of_moons
 update planets set has_rings = false where planet_name = 'Mercury';
 
 --exercise 8) Select all the planets that have the letter 'a' in their name 
-select planet_name from planets where ; 
+select * from planets WHERE planet_name like '%a%'; 
 
--- Select all the planets that start with the letter 'M'
+--9)Select all the planets that start with the letter 'M'
+select * from planets WHERE planet_name like'M%';
 
--- Select all the planets with their third character being 'r
-select planet_name from planets where (length(planet_name) = '3');
+--10) Select all the planets with their third character being 'r
+select * from planets where planet_name like '__r%';
 
 --11)Delete Pluto from the planet list
 delete from planets where planet_name = 'Pluto';
 
 --12) Print out the current date and time. 
-current_timestamp;
+
 
 
 
