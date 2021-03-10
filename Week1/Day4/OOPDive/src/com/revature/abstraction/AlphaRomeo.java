@@ -23,6 +23,7 @@ public abstract class AlphaRomeo implements Vehicle{
 	@Override
 	public void turnOnEngine() {
 		// TODO Auto-generated method stub
+		System.out.println(Vehicle.fakePi);
 		
 	}
 

@@ -28,18 +28,23 @@ public class InheritanceDriver {
 		
 		//In this food example, we can reduce the amount of code by using inheritance!
 		
-		Food myFood = new Food("Apples", 1); 
-		Fruit myFruit = new Fruit("Apples",1,10);
+		Food myFood = new Food(); 
+		Fruit myFruit = new Fruit("Banana",1, 20);
+		
+		System.out.println(myFood.name);
+//		System.out.println(myFruit.name);
 		
 		
-		Food myFood1 = new Food("Cucumber", 1);
-		Vegetable myVeg = new Vegetable("Cucumber", 1, 20);
-		
-		Food myFood2 = new Food("Tomatoe Soup", 1);
-		
-		//SPACE EXAMPLE - inheriting methods
-		
-		Moon myMoon = new Moon();
+//		
+//		
+//		Food myFood1 = new Food("Cucumber", 1);
+//		Vegetable myVeg = new Vegetable("Cucumber", 1, 20);
+//		
+//		Food myFood2 = new Food("Tomatoe Soup", 1);
+//		
+//		//SPACE EXAMPLE - inheriting methods
+//		
+//		Moon myMoon = new Moon();
 		
 //		System.out.println(myMoon.name);
 //		System.out.println(myMoon.mass);

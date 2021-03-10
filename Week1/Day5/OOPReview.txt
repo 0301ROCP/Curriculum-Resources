@@ -50,7 +50,7 @@ Encapsulation
 		within my class!
 
 	Java?
-		public, projected, default (implicit) and private! 
+		public, protected, default (implicit) and private! 
 			
 
 

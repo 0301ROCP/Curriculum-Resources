@@ -4,13 +4,13 @@ public interface Vehicle extends Machinery{
 	
 	/*
 	 * Interface: 
-	 * 		Cannot have any concerte methods*** (all methods are abstract)
+	 * 		Cannot have any concrete methods*** (all methods are abstract)
 	 * 
 	 * 		Default all methods are 'abstract' and public. 
 	 * 
 	 * 		variables are by default defined as public, static and final. 
 	 * 
-	 * 		An inteface cannot contain a constructor!
+	 * 		An interface cannot contain a constructor!
 	 * 
 	 * 		You can implement multiple interfaces!
 	 */

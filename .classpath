@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="FirstProject/src/" kind="src" path="Week1/Day1"/>
+	<classpathentry kind="src" path="Week1/Day1/FirstProject/src"/>
+	<classpathentry kind="src" path="Week1/Day2/SecondEverProject/src"/>
+	<classpathentry kind="src" path="Week1/Day3/BensCafe/src"/>
+	<classpathentry kind="src" path="Week1/Day3/Day3Project/src"/>
+	<classpathentry kind="src" path="Week1/Day4/Day4Project/src"/>
+	<classpathentry kind="src" path="Week1/Day4/OOPDive/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

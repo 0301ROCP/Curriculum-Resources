@@ -23,16 +23,14 @@ public class ScannerExample {
 		Scanner sc = new Scanner(System.in); //Scanner does not have a no-args constructor. 
 											//System.in tells the scanner to accept inputs from the terminal 
 		boolean menuIsActive = true;
-		
-		
-		
+				
 		while(menuIsActive) {
 			
 			System.out.println("Hello there!");
 			System.out.println("Write down a number!");
 			
 			
-			String stringNumber = sc.nextLine(); //only use this prefereabbly 
+			String stringNumber = sc.nextLine(); //only use this preferably 
 			
 			int number = Integer.parseInt(stringNumber);
 			

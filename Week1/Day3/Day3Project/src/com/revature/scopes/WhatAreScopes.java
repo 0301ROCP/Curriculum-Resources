@@ -20,7 +20,7 @@ public class WhatAreScopes {
 		
 //		System.out.println(myObjectScope); //This doesn't work, because we need an object!
 		
-		System.out.println(pi = 3);
+//		System.out.println(pi = 3);
 		
 		/*
 		 * Scope: 
@@ -31,7 +31,7 @@ public class WhatAreScopes {
 		 * 		This is a variable that can be referenced anywhere within the class!
 		 * 
 		 * Object scopes: 
-		 * 		Referenced by anthing inside the object. 
+		 * 		Referenced by anything inside the object. 
 		 * 
 		 * 	Method scopes: 
 		 * 		Variables can only be referenced within the method!
@@ -55,7 +55,7 @@ public class WhatAreScopes {
 		
 		
 		//Block scope
-		int j = 0;
+//		int j = 0;
 		// the 'i's only exist within their respective loops
 //		for(int i = 0; i< 10;i++) {
 //			System.out.println(i);

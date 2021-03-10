@@ -42,10 +42,11 @@ public class ExampleWrapper {
 		int myPrimInt = 9;
 		
 //		myPrimeInt. int has no method or properties associated with it!
+		System.out.println("My int long value");
 		System.out.println(myInt.longValue());
 		
 		///Boxing is the process of converting a primitive to its wrapper class!
-		// Autoboxing! This is implicilty done by the class, automatically!
+		// Autoboxing! This is implicitly done by the class, automatically!
 		Double myDouble = 9.0;
 		Byte myByte = 1;
 		Short myShort = 2;
@@ -62,7 +63,10 @@ public class ExampleWrapper {
 		/// .valueOf();for primitive conversion!
 		
 		
-		
+		Double d = 45.0;
+		Double d2 = 45.0000000000;
+		System.out.println(d.compareTo(d2));
+
 		
 		
 	}
