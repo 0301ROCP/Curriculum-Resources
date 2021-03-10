@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="FirstProject/src/" kind="src" path="Day1"/>
+	<classpathentry kind="src" path="Day1/FirstProject/src"/>
+	<classpathentry kind="src" path="Day2/SecondEverProject/src"/>
+	<classpathentry kind="src" path="Day3/Day3Project/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
