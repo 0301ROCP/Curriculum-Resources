@@ -42,6 +42,9 @@ Introduction to Java
 
 		Create our first Hello World program!
 
+	Primitives:
+		a simple data type like an int or a char.
+
 
 	Primitives: 
 		A simple data type like an int or a char.
@@ -90,6 +93,20 @@ Introduction to Java
 				You can break out of a while loop using "break", which will end the loop at that exact point!
 			}
 	
+<<<<<<< HEAD
+	Control flow statements will affect the flow of how your code will be executed. 
+	They allow you to repeat blocks of code or ignore it, depending on what logic 
+	you've implemented. 
+
+		if statement
+
+		
+		while statement and do while statement
+
+
+		switch statement
+
+=======
 			do while is basically the same as a while loop, but it will execute at least once, 
 				even if the condition has not been met.
 
@@ -118,6 +135,7 @@ Introduction to Java
 
 
 		for statement	
+>>>>>>> ca8e1965c4999c95bb801039a8c32db7fa8dc272
 			
 			for([starting state]:[Ending state]:[incrementing state]){
 				
