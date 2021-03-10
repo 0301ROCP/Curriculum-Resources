@@ -1,0 +1,43 @@
+--Creating a basic table
+
+
+create table planets( --We've created a table, planets with a single column, planet_id
+--<column name> <data-type> <constraint1> <constraint2> ... ,
+	planet_id int primary key, --primary key column are used to select a particular record
+	planet_name varchar(30) not null,
+	planet_description varchar(60) not null unique,
+	has_rings boolean not null,
+	number_of_moons smallint check(number_of_moons > -1)
+);
+
+select * from planets; --get method
+
+insert into planets (planet_name, planet_description, has_rings, number_of_moons) values
+(3, 'Earth', 'cradle of civilization', false, 1),
+(4, 'Mars', 'Earth 2.0', false, 2),
+(5, 'Jupiter', 'Big', true, 67),
+(6, 'Saturn', 'very ringy', true, 82),
+(7, 'Uranus', 'blue', true, 27),
+(8, 'Neptune', 'getting nippy', true, 14),
+(9, 'Pluto', 'you cannot get rid of me', false, 2);
+
+
+select * from planets where planet_name = 'Jupiter';
+
+select * from planets where has_rings = true;
+
+select * from planets order by number_of_moons desc;
+
+select * from planets order by planet_name desc;
+
+insert into planets(planet_name, has_rings, number_of_moons) values ('x9jv',false, 40);
+
+update planets set has_rings = false where planet_name = 'Mercury';
+
+select * from planets where planet_name like '%a%';
+
+select * from planets where planet_name like 'M%';
+
+select * from planets where planet_name like '__r%';
+
+delete from planets where planet_name = 'Pluto';
