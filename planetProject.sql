@@ -21,7 +21,7 @@ insert into planets (planet_name, planet_description, has_rings, number_of_moons
 	
 
 --1
-select * planets;
+select * from planets;
 --2
 select * from planets where planet_name = 'Jupiter';
 --3
