@@ -1,0 +1,41 @@
+--1
+select * from employee;
+
+--2
+select * from employee where last_name = 'King';
+
+--3
+select * from employee where first_name = 'Andrew' and reports_to is null;
+
+--4
+select * from album order by title desc;
+
+--5
+select first_name from customer order by city;
+
+--6
+insert into genre values (100, 'Ray'), (101, 'Campbell');
+insert into employee (last_name, first_name) values ('Campbell', 'Raymond'), ('Campbell2', 'Raymond2');
+
+--7
+insert into customer (first_name, last_name, email) values ('Campbell', 'Raymond', '123@abc.com'), ('Campbell2', 'Raymond2', '123@abc.com2')
+
+--8
+update customer set last_name = 'Walter', first_name = 'Robert' where last_name = 'Mitchell';
+
+--9
+update artist set name = 'CCR' where name = 'Creedence Clearwater Revival'; 
+
+--10
+select * from invoice where billing_address like 'T%'; 
+
+--11
+select * from invoice where total between 15 and 30;
+
+--12
+select * from employee where hire_date between '2003-06-01' and '2004-03-01';
+
+--13
+delete from customer where last_name = 'Walter';
+delete from invoice where customer_id = 32;
+delete from invoice_line where invoice_id in (select invoice_id from invoice where customer_id = 32);
