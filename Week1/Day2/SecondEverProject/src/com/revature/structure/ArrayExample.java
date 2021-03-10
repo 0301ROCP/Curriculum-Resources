@@ -26,7 +26,7 @@ public class ArrayExample {
 		char[] charArray = {'1','b','c','k'}; //default value is ' '
 		
 		
-		intArray = new int[5]; //assiging our int array to be of length 5! 0 - 4
+		intArray = new int[5]; //assigning our int array to be of length 5! 0 - 4
 								//by default the values of an int array is 0 
 		
 		

@@ -58,7 +58,7 @@ public class Fruit {
 	
 	double addNumbers(double notANumber, double a) { //this method will return a single value, a double 
 		
-		// The name we give to our paramenters, really don't matter 
+		// The name we give to our parameters, really don't matter 
 		// A method doesn't necesarily need to change the state of an object. 
 		return notANumber + a;
 	}
