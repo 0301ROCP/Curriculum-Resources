@@ -20,6 +20,7 @@ public interface PlanetDao {
 	
 	//CREATE
 	boolean insertPlanet(Planet p);
+	boolean insertPlanetWithPreparedStatement(Planet p);
 	
 	
 	//READ

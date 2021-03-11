@@ -14,9 +14,12 @@ public class MainDriver {
 		
 		PlanetDao pDao = new PlanetDaoImpl();
 		
-		Planet p = new Planet(0, "Planet-X", "Fake planet 2.0", true, 100);
+		Planet p = new Planet(0, "Brand New Planet", "Fake planet 4.0", true, 100);
 		
-		pDao.insertPlanet(p);
+		pDao.insertPlanetWithPreparedStatement(p);
+		
+		Planet returnedPlanet = pDao.selectPlanetByName("Brand New Planet");
+		System.out.println(returnedPlanet);
 		
 	}
 
