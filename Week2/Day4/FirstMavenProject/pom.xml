@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		<!-- This is the root rag of the file -->
+  <modelVersion>4.0.0</modelVersion> <!-- This defines which version of the page object model to be used -->
+  <groupId>com.revature</groupId>  <!--  Group id stores multiple artifacts! -->
+  <artifactId>FirstMavenProject</artifactId> <!--  This is the project itself -->
+  <version>0.0.1-SNAPSHOT</version>
+  
+  
+  
+  <!-- 
+  
+  		What is Maven?
+  				Maven is a dependency manager and build automation tool for JAva programs. 
+  				
+  				Dependency manager: 
+  					There are a lot of useful library and packages and code out there, that isn't in our 
+  					JRE system libaries. 
+  					
+  					How to integrate those dependencies into our project? 
+  					
+  					Maven helps us to integrate our depednencies into our project!
+  					
+  				Build automation tool:
+  					Building a Java project, is converting into a distrivutale format!
+  					Also something difficult to do, without Maven. 
+  					
+  					
+  				How does Maven know about our project? 
+  					Through the pom.xml file! e.g. telling Maven what Java version we want our project. 
+  					
+  					POM stands for Project Object model !
+  					
+  					HTML - Hyper Text Markup Language - Displaying content for websites!
+  					XML - eXtensible Markup Language - Storing (configuration) information inside of a document. 
+  					
+  					pom.xml: contains inforamtiona bout the project used to build the project, including
+  						project dependencies and plugins 
+  					
+   -->
+   
+   
+   <!--  To update project to  1.8, add the below tags, right click project -> Maven -> update project! -->
+  <properties>
+   	<maven.compiler.target>1.8</maven.compiler.target>
+   	<maven.compiler.source>1.8</maven.compiler.source>
+  </properties>
+  
+  
+  <dependencies> <!-- MAKE SURE TO ADD dependency> inside of <dependencies> -->
+  
+  		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <version>42.2.18</version>
+		</dependency>
+  		
+  
+  </dependencies>
+   
+</project>
