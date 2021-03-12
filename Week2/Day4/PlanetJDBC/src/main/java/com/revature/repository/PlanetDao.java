@@ -32,10 +32,12 @@ public interface PlanetDao {
 	//UPDATE
 	//My App allows the planet to change the number of moons it has!
 	boolean updatePlanet(Planet oldPlanet, int newNumberOfMoons);
-	
+//	boolean updatePlanet(String planetName, int newNumberOfMoons);
+//	boolean updatePlanet(int planetId, int newNumberOfMoons);
 	
 	//DELETE
 	boolean deletePlanet(Planet p);
+//	boolean deletePlanet(int planetId);
 	
 	
 

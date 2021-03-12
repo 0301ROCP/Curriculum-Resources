@@ -12,12 +12,21 @@ public class MainDriver {
 		ConnectionFactory.getConnection();
 
 		PlanetDao pDao = new PlanetDaoImpl();
+<<<<<<< HEAD
 
 		// Planet p = new Planet(0, "Brand New Planet", "Fake planet 4.0", true, 100);
 		// pDao.insertPlanetWithPreparedStatement(p);
 
 		System.out.println();
 
+=======
+		
+		Planet p = new Planet(0, "Brand New Planet", "Fake planet 4.0", true, 100);
+		
+		
+		pDao.insertPlanetWithPreparedStatement(p);
+		
+>>>>>>> d3b2f6b9088080451f466259f6e7178b9cf40743
 		Planet returnedPlanet = pDao.selectPlanetByName("Brand New Planet");
 		System.out.println(returnedPlanet);
 
