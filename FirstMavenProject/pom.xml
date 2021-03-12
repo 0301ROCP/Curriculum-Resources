@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- This is the root tag of the file -->
+  <modelVersion>4.0.0</modelVersion> <!-- This defines which version of the page object model to be used -->
+  <groupId>com.revature</groupId> <!-- Stores multiple artifacts -->
+  <artifactId>FirstMavenProject</artifactId> <!-- The project itself -->
+  <version>0.0.1-SNAPSHOT</version>
+    <name>main</name>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- 
+  
+  
+  
+  
+  		What is Maven?
+  			Maven is a dependency manager and build automation tool for Java programs.
+  			
+  			Dependency manager:
+  				There are a lot of useful library and packages and code out there, that isn't in our JRE system libraries.
+  				
+  				How to integrate those dependencies into our project?
+  				
+  				Maven helps us to integrate our dependencies into our project!
+  				
+  			Build automation tool:
+  				Also something difficult to do, without Maven.
+  				
+  				How does Maven know about our project?
+  					Through the pom.xml file.  eg. telling Maven what Java version we want our project.
+  					
+  					POM stands for Project Object Model
+  					
+  					HTML - Hyper Text Markup Language - Displaying content for websites!
+  					XML - eXtensible Markup Language - Storing information inside of a document.
+  					
+  					pom.xml: contains information about the project used to build the project, including
+  						project dependencies and plugins
+  					
+   -->
+  
+  
+  
+  <properties>
+  	<maven.compiler.target>1.8</maven.compiler.target>
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  </properties>
+  
+
+  
+  <dependencies> <!-- make sure dependency is inside of dependencies -->
+  
+		  <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <version>42.2.18</version>
+		</dependency>
+  
+  </dependencies>
+  
+  
+</project>
