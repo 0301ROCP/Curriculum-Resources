@@ -96,14 +96,17 @@ drop table pets;
 
 drop table planets cascade;
 drop table geological_features cascade;
+drop table planet_features cascade;
 
 create table planets(
 	planet_id serial primary key,
+	number_of_moons int,
 	planet_name varchar(30)
 	);
 
 create table geological_features (
 	feature_id serial primary key,
+	feature_description varchar(60),
 	feature_name varchar(30)
 );
 
@@ -116,12 +119,12 @@ create table planet_features(
 	 f_id int references geological_features(feature_id)
 );
 
-insert into planets(planet_name) values ('Earth'),('Mars'),('Mercury'), ('Jupiter');
+insert into planets(planet_name,number_of_moons) values ('Earth',1),('Mars',2),('Mercury',0), ('Jupiter',82);
 
-insert into geological_features(feature_name) values
-	('Mountains'),
-	('Planet scale storms'),
-	('Desert');
+insert into geological_features(feature_name, feature_description) values
+	('Mountains','pointy stuff'),
+	('Planet scale storms', 'windy'),
+	('Desert', 'dry');
 
 insert into planet_features(p_id,f_id) values
 	(( select planet_id from planets where planet_name = 'Earth'), 
@@ -136,6 +139,7 @@ insert into planet_features(p_id,f_id) values
 	(( select planet_id from planets where planet_name = 'Jupiter'), 
 		(select feature_id from geological_features where feature_name = 'Planet scale storms'));
 	
+	select * from planets;
 	select * from planet_features;
 	select * from geological_features gf ;
 
@@ -148,9 +152,15 @@ insert into planet_features(p_id,f_id) values
 --
 
 select * from geological_features gf 
-	where feature_id = 
+	where feature_id in --Have to use "in" because we get multiple records from the nested query 
+	(select f_id from planet_features pf where pf.p_id = 
+		(select planet_id from planets where planets.planet_name = 'Earth') );
+	
+	
+	select * from geological_features gf 
+	where feature_id in --Have to use "in" because we get multiple records from the nested query 
 	(select f_id from planet_features pf where pf.p_id = 
 		(select planet_id from planets where planets.planet_name = 'Jupiter') );
 
-
+select * from planets where planets.planet_name = 'Jupiter'
 

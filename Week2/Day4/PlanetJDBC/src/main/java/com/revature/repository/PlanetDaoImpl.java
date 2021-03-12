@@ -138,13 +138,34 @@ public class PlanetDaoImpl implements PlanetDao{
 		}
 		
 		
-		return planets.get(0); //return the first element
+		return planets.get(0); //return the first element, because I'm being a bit lazy 
 	}
 
 	@Override
 	public Planet selectPlanetById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+
+		Planet sqlPlanet = null;
+		
+		try(Connection conn = ConnectionFactory.getConnection()){ //try-with-resources will close the resource outside of the try block 
+			
+			String sql = "SELECT * FROM planets WHERE planet_id = ?";
+			
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.setInt(1, id);
+			
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				sqlPlanet = new Planet(rs.getInt("planet_id"),rs.getString("planet_name"),rs.getString(3),rs.getBoolean("has_rings"),rs.getInt(5));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return sqlPlanet;
 	}
 
 	@Override
