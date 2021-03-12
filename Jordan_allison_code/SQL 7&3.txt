@@ -1,0 +1,45 @@
+--SQL lab 7.0
+
+--7.1
+
+select first_name, last_name , invoice_id from customer c inner join invoice i on i.customer_id = c.customer_id ;
+
+--7.2
+
+select c.customer_id , first_name, last_name, invoice_id, total from customer c full outer join invoice i on c.customer_id = i.customer_id ;
+
+--7.3
+
+select name, title from artist a right join album a2 on a.artist_id = a2.artist_id  ;
+
+--7.4
+
+select name, title from artist a cross join album a2 order by a.name; 
+
+--7.5
+
+select * from employee e , employee e2 where e.reports_to = e2.employee_id ;
+
+--SQL 3.0
+
+--3.1
+
+select now();
+
+select name, length(name) from media_type;
+
+--3.2
+
+select avg(total) from invoice;
+
+select max(total) from invoice;
+
+--3.3
+-- use either depending on how many decimals you want
+select avg(unit_price) from invoice_line;
+select avg(unit_price)::numeric(10,2) from invoice_line;
+
+--3.4
+
+select * from employee where extract (year from birth_date) > 1968; 
+
