@@ -32,7 +32,10 @@ Sublangauges within SQL:
 		GRANT
 		REVOKE
 
-	TCL 
+	TCL (Transaction Control Language)
+		SAVEPOINT
+		ROLLBACK
+		COMMIT
 
 
 

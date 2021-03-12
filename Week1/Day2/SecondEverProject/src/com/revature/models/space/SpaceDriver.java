@@ -21,15 +21,16 @@ public class SpaceDriver {
 		Moon[] marsMoons = {deimos, phoebus};
 		
 		Planet mars = new Planet("Mars", 0.45,marsMoons,false);
-		Planet fakeMars = mars;
+//		Planet fakeMars = mars;
 		
 		System.out.println("Earth mass :" + earth.mass);
 		System.out.println("Mars mass :" + mars.mass);
 		earth.orbit();
-		earth.crash(earth);
+		earth.bigCrash(mars);
 		
-		System.out.println("Mars mass :" + mars.mass);
 		System.out.println("Earth mass :" + earth.mass);
+		System.out.println("Mars mass :" + mars.mass);
+		
 		
 
 	

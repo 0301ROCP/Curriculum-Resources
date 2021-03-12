@@ -24,7 +24,7 @@ public class Fruit {
 	 * 		method signature and body. (allows reuse of blocks of code!)
 	 * 
 	 * Method: 
-	 * 		A method is a function that is associated with an oboject. 
+	 * 		A method is a function that is associated with an object. 
 	 */
 	
 	String fruitType;

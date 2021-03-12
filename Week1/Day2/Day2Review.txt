@@ -1,20 +1,87 @@
 Day 2 Review:
 
 	What is an Object vs Class?
+		-Object is a 'physical' entity, 
+		-a class is a 'logical' entity.
+		- Class is essentially a blueprint for the instantiation of an object. Typically if  you want to 
+		  access the methods and attributes 'within' a class, you'll need to instantiate it to an
+		  object (unless you use a static keyword)
 	
 	What are the properties and behaviours of an object?
+		-Object is an implementation of a class
+		-Object is a 'physical' entity,
+		-The 'new' keyword is a way of instantiating an object into memory 
+
 	
-	What does a method consist of and what does a constructor consist of? 	
+	What does a method consist of and what does a constructor consist of?
+		
+		-A method is a block of code which only runs when it is called.
+		-myMethod();
+
+			public class Main {
+  				static void myMethod() {
+   				 System.out.println("I just got executed!");
+  					}
+
+  			public static void main(String[] args) {
+    				myMethod();
+  				}
+			}			
+		
+		-Type NameOfVariable = new Constructor();
+			
+			Dog d = new Dog();
+
+			makes a new Dog object called d. 
+		
+	
 
 	Difference between a method and a constructor?
+		-A method is a function that is associated with an object. 
+		-methods also follow camelcase 
+		-This main method is typically stored within the class called 'Driver'
+
+		-A constructor is a special method that is used to instantiate an object.
+	   	-A constructor DOES NOT HAVE A RETURN TYPE.
+	   	-A constructor is called when an object is created, it's invoked by the "new" keyword!
+
 	
 	method overloading 
+		- We can use methods with the same name! 
+	  
+	 	-but we have to change the method signature, so that we can specify which method we want!
+	  
+	  	-We've overloaded by changing:
+	 			the number of arguments/parameters
+	 			the parameter type
+	 			the order
+	 
 
 	var-args	
+		-A method that takes a variable number of arguments is a varargs method.
+		-A variable-length argument is specified by three periods(…)
+
+		example:
+			public static void fun(int... a) 
+
+
 
 	What is an array?
+		-Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
+		String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
 
 	enhanced for loop!
+
+		-With iterable entities, we can use an enhanced for loop. 
+		-We don't reference the positions directly, instead we reference the element itself.
+			
+
+			for(double element: doubleArray) {
+				System.out.println(element);
+				}
+		
+		
 
 
 mini challenges 

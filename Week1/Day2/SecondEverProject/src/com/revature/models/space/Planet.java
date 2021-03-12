@@ -50,6 +50,7 @@ public class Planet {
 		System.out.println("I'm orbiting the sun!");
 	}
 	
+	
 	void crash() {
 		System.out.println("I've crashed into something, but I don't know what!");
 		this.mass = this.mass/2; //Whenever it crashes, it loses half its mass. 
@@ -59,6 +60,18 @@ public class Planet {
 		System.out.println("I've crashed into "+  p.name );
 		this.mass = this.mass/2;
 		p.mass = p.mass/2;
+	}
+	
+	void bigCrash(Planet p) {
+		System.out.println("I've crashed into "+  p.name );
+		
+		if(this.mass > p.mass) {
+			this.mass = this.mass * .90;
+			p.mass = p.mass * .10;
+		} else {
+			this.mass = this.mass/2;
+			p.mass = p.mass/2;
+			}
 	}
 	
 	
