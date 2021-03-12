@@ -23898,10 +23898,37 @@ delete from invoice where customer_id = (select customer_id from customer where 
 delete from invoice_line where invoice_id in (select invoice_id from invoice where customer_id = (select customer_id from customer where first_name = 'Robert' and last_name = 'Walter'));
 
 
+--7.1 inner join
 
+select * from customer inner join invoice on customer.customer_id = invoice.invoice_id; 
 
+--7.2 outer 
+select * from customer c full outer join invoice i on c.customer_id = i.invoice_id; 
 
+--7.3 right join
+select * from artist a3 right join album a2 on a3.artist_id = a2.artist_id ;
 
+--7.4 cross
+select * from album a2 cross join artist a3 order by a3.artist_id asc;
 
+--7.5 self
+select * from employee e2, employee e3 where e2.reports_to = e3.employee_id; 
 
+--3.1 system defined functions
+select current_timestamp;
+
+select name, length(name) from media_type;
+
+--3.2 system defined aggregate functions
+--create a function that returns average total of all invoices
+select avg(total) from invoice group by invoice_id;
+--create function that returns most expensive track
+select max(total) from invoice group by invoice_id;
+
+--3.3 user defined scalar functions
+--create function that returns average price of invoiceline items
+--  in the invoiceline table
+
+--3.4 user defined table valued functions
+--create a function that returns all employees who are born after 1968
 
