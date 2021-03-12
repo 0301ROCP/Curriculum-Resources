@@ -38,11 +38,19 @@ where (e.reports_to = e2.employee_id);
 --SQL Functions
 
 --3.1 System Defined Functions
-
-
+--Full date
+select current_timestamp; 
+--Just current time 
+select current_time; 
+--Get the length of the strings
+select * from media_type;
+select LENGTH(media_type.name) from media_type;
 
 --3.2 System Defined Aggregate Functions
+select AVG(i.total) from invoice i;
 
+select * from track;
+select max(t.unit_price) from track t; 
 
 
 
