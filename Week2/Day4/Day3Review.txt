@@ -1,0 +1,79 @@
+Sublanguages of SQL
+
+	DML: Data manipulation language 
+	CRUD - INSERT, SELECT, UPDATE, DELETE
+
+	DDL: Data defintion language 
+	DROP, TRUNCATE, CREATE, ALTER 
+
+	DQL: Data Query Language 
+	SELECT 
+
+	DCL : Data Control Language
+	GRANT, REVOKE 
+
+	TCL: Transcation Control Language
+	SAVEPOINT, ROLLBACK, COMMIT 
+
+
+Transactions: 
+	Must follow ACID: 
+
+	Atomicity : (Atom meant indivisible) Transaction must complete all 
+			its queries or none of them.
+
+	Consistency: Referential integerity is maintained after every transaction.
+			(No orphan records, no alteration to the table structures)
+
+	Isolated: Transactions don't intefere with each other
+		Isolation levels: 
+			read uncommitted 
+			read committed (default postgres level)
+			repeatable 
+			serializable
+
+	Durability: Data is durable (so in the event of a local failure, there 
+			should still be a backup) 
+
+
+If a Transaction is not isolated (enough), read phenomenas can happen: 
+	dirty reads : reading data that hasn't been committed. 
+	non-repeatable reads : when a row/record is read twice in a 
+		transaction and the values are differnt. 
+	phantom reads: reading data that is being added or modified by 
+		a running transaction. 
+
+Isolation is basically, deciding when a transaction has sole access to a table. 
+
+
+DQL clauses: 
+
+	How do I achieve pattern matching? 
+		"I want customers, with names beginning with a?"
+			select * from customers where name like 'a%';
+		"I want customers, with second letter being a?"
+			select * from customers where name like '_a%';
+
+	With pattern matching we need wildcards:
+		% : placeholder for 0 or more characters
+		_ : placeholder for a single characer 
+
+
+	What happens if I want to select the some invoices associated with
+		all customers "Steve mcSteve"
+		
+	"How do I change this, if there are multiple "Steve McSteve"
+	select * from invoices where customer_id in 
+		(select customer_id from customer where name = 'Steve McSteve' 
+							and name = 'Bobby mcBobby');
+
+	customer_id is primary key in customer table
+	customer_id is foreign key in invoices table.
+
+	select * from invoices where invoice_id in 
+		(select invoice_id from customer where name = 'Steve McSteve' 
+							and name = 'Bobby mcBobby');
+
+	invoice_id is foreign key in customers table
+	invoice_id is primary key in invoice table
+	

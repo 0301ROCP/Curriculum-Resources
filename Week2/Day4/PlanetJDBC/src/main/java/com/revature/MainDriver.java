@@ -16,6 +16,7 @@ public class MainDriver {
 		
 		Planet p = new Planet(0, "Brand New Planet", "Fake planet 4.0", true, 100);
 		
+		
 		pDao.insertPlanetWithPreparedStatement(p);
 		
 		Planet returnedPlanet = pDao.selectPlanetByName("Brand New Planet");

@@ -1,0 +1,30 @@
+Normalization: 
+	Refers to an optimization process of structuing a relational database 
+	in a way that REDUCES REDUNDANCY of data and imporoves data integrity 
+	and consistency.
+
+	We have up to 6 Normal Forms (NF), each of which build on top of each 
+	other. The industry standard is 3NF.
+
+	1NF - Every property is atomic , A primary key 
+		Primary key - is a column, that every record has to have a unique value. 
+				(multiple columns as well) 
+	2NF - We have to achieve 1NF, no partial depedencies 
+	3NF - We have to achieve 2NF, no transitive dependency. 
+
+	If Bob can run faster than Steve, and Steve can run faster than Barry. 
+	Then Bob is Faster than Barry. 
+	(An example of Transitive depedency)
+
+	a == b 
+	c == b    --> c == a 
+
+	a > b   --> a > c
+	b > c
+
+	A nice way to remember them is: 
+
+
+	The key, the whole key and nothing but the key. 
+
+	
