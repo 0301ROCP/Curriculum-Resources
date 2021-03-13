@@ -40,7 +40,7 @@ create table if not exists planets( --We've create a table, planets, with a sing
 );
 
 -- NOT DDL COMMANDS BELOW-------------------------------------------------------
-select * from planets;
+select * from planets where planet_id = 1;
 
 insert into planets (planet_name, planet_description, has_rings, number_of_moons) values 
 	('Mercury', 'Never too close', true, 0),
