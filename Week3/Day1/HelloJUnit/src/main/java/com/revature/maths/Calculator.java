@@ -1,7 +1,16 @@
 package com.revature.maths;
 
+import com.revature.exceptions.PressedWrongButton;
+
 public class Calculator {
 	
+	public boolean magic;
+	
+	public Calculator() {
+		super();
+		this.magic = false;
+	}
+
 	public int add(int x, int y) {
 		return x+y;
 	}
@@ -41,4 +50,13 @@ public class Calculator {
 		
 	}
 
+	public void toggleMagic() {
+		this.magic = !this.magic;
+//		this.magic = true;
+	}
+	
+	public void pressingButtons() { //all this method does, is throw an exceptions 
+		
+		throw new PressedWrongButton();
+	}
 }
