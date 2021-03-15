@@ -1,0 +1,62 @@
+SQL - (Structured Query Language)
+	A language that is used to interface with relational 
+	databases. 
+
+Sublanguages: 
+	DML - INSERT , SELECT, UPDATE, DELETE 
+	DDL - CREATE, TRUNCATE, ALTER, DROP
+	DQL - SELECT 
+	DCL - GRANT, REVOKE
+	TCL - SAVEPOINT, ROLLBACK, COMMIT
+
+Transaction ?
+	A group of SQL queries that we send to the database. 
+Query?
+	A single SQL statement 
+
+Properties of a transaction (ACID)
+	Atomic 
+	Consistency 
+	Isolation 
+	Durable 
+
+Normalization?
+	Reducing data redundancy in our tables. 
+	There are 6 NF. Industry standard is 3NF.
+
+	1NF - primary key, columns are atomic
+	2NF - Achieve 1NF, no partial dependencies. 
+	3NF - Achieve 2NF, no transitive dependencies 
+
+Multiplicity ?
+	Relationships between tables. 
+	One to one. 
+	One to many. 
+	Many to one. 
+	Many to Many? We need the junction table to establish that!
+
+
+Maven: 
+	Project management tool, dependency management tool. 	
+	Build automation tool. 
+
+JDBC: 
+	Java Database Connection. 
+	Provides API, that abstracts away the process of connecting
+	our Java application to our PostgreSQL database. 
+
+	Connection 
+	DriverManager 
+	Statement
+	PreparedStatement 
+
+
+DAO: 
+	Data Access Object 
+	Abstract away the CRUD operations we perform on the database. 
+
+
+
+
+
+
