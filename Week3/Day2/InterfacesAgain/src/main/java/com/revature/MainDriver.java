@@ -1,5 +1,9 @@
 package com.revature;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 import com.revature.functional.AVeryBasicCalculator;
 import com.revature.functional.Car;
 import com.revature.functional.Motorbike;
@@ -39,7 +43,7 @@ public class MainDriver {
 	 * 			In the case of serializable, it tells the JVM that this entity is expected to be serialized.
 	 * 				(when an object is converted into and from bytecode - sometimes for storing in a file)
 	 * 
-	 * 		Functional Interface :
+	 * 		Functional Interface : 
 	 * 
 	 * 			Have 1 and ONLY 1 method to implement!
 	 * 
@@ -73,6 +77,7 @@ public class MainDriver {
 //		Car c = new Jaguar(); I'll have to define a Jaguar class that extends Car 
 		
 		//lambdas: 
+		// lambda expression consists of an arrow : ( type1 arg1, type2 arg2, etc..) -> { //method block logic};
 		
 		Car c = () -> {System.out.println("I'm driving!!!");};
 		
@@ -94,6 +99,7 @@ public class MainDriver {
 //		System.out.println(calc.add(1, 2));
 		
 		
+		
 		Motorbike mb = new Honda();
 		
 		mb.wheelie(10, 10000);
@@ -109,6 +115,49 @@ public class MainDriver {
 		};
 		
 		mb2.wheelie(10, 1000000);
+		
+	
+		
+		//Let's say I want to compare food items
+		
+		List<Food> foodList = new ArrayList<>();
+		
+		foodList.add(new Food("Appple", 1));
+		foodList.add(new Food("Kiwi", 1));
+		foodList.add(new Food("Chips", 4));
+		foodList.add(new Food("Chocolate", 2));
+		
+		
+		//How would I compare 2 numbers? 
+		// 2 < 3
+		//  27 == 25 + 2
+		
+		//
+		Comparator<Food> compareFoodPrice; //I want to use this interface to provide a method for comparing 2 food items
+		
+		compareFoodPrice = (Food f1,Food f2 ) ->{
+					
+			if(f1.getPrice() < f2.getPrice()) {
+				//if f1 is greater than f2 then we have to provide a int greater than 0
+				return 10000000;
+			}else if(f1.getPrice() > f2.getPrice()) {
+				//if f1 is less, then we return an int less than 0
+				return -112323123;
+			} else {
+				//if they're the same , we return 0
+				return 0;
+			}
+			
+		};
+		
+		System.out.println(foodList);
+		
+		foodList.sort(compareFoodPrice); // Java has no idea how I want to sort my food items, could be on price, name or some other variable!!!!
+	
+		
+		// What happens if I want to sort it by name????
+		// Waht happens if I have calorie counting in my food object? Do I want to sort it out by that ? 
+		System.out.println(foodList);
 	}
 
 }
