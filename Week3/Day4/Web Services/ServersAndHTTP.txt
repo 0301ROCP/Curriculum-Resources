@@ -1,0 +1,89 @@
+Server?
+	A place everything is stored. 
+	Software but also hardware. REsponds to a client. 	
+	A hub where everything can takes place. 
+	Hardware for backend application. 
+	A machine or VM that is dedicated to fufling requests for 
+		information. 
+
+	A server is software designed to process requests and 
+	deliver responses to another computer over the internet!
+
+
+CLient?
+	A client is a program that runs on a local machine, requesting 
+	services from the server. 
+
+
+Client Server Architecture 
+
+2 tier architecture - The user interface stored at the client machine 
+	and the database on the server.
+
+3 tier architecture - there is a middleware between the user interface 
+	and the database. The 3 tiers are named, the presentation layer
+	service layer and data layer. 
+
+
+HTTP protocol - Hyper Text Transfer protocol. 
+
+	Allows communication between client and server machines. 
+	(This is all relative)
+
+	The communication pattern is a request, then a response. 
+
+	(Communication between 2 devices)
+
+	A client machine, sends a HTTP request
+
+	Http request will contain: 
+		url (endpoint) - defines the endpoint for where you're sending off your request. 
+		method (verb) - tells the server what the nature of the request is. 
+			GET : READ - retrieves information.
+			POST : CREATE - create a resource. 
+			PUT : UPDATE - update a resource. 
+			DELETE : DELETE - remove information.  
+
+		headers (meta data) - Also contains meta data! (e.g. what languages accept)
+		body (actual data) - the actual content of the message. It's format is in 
+					text/string ( JSON or XML)
+
+		eXtensible Markup Language (slightly older version): 
+			<fruit>
+				<name>
+					Apple
+				</name>
+			</fruit>
+			
+
+		JavaScript Object Notation:
+			{	
+				"type":"Fruit",
+				"name":"Apple"
+			}
+
+
+	A server machine will process the request and then return a
+	response: 
+	
+	Http response will contain: 
+		status code - tells us if the operation is successful! 
+				and provides information on what happened 
+
+				100s - Informational responses
+				200s - Success!!!
+					200 - OK
+					201 - created
+					204 - no content
+				300s - Redirection 
+				400s - Client problem
+					404 - resource not found
+					401 - unauthorized
+
+				500s - Server problem 
+					500 - internal server error 
+
+		head (meta data) - also contain the meta data
+		body (actual data) - Also follow JSON/XML/HTML/ any standard formats!
+
+

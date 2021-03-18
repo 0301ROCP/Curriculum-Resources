@@ -169,14 +169,14 @@ public class MainDriver {
 		 *  		What's to stop a consumer from removing too many resource in one go??? (taking it out of a empty buffer)
 		 *  	
 		 *  
-		 *  	Syncrhonization issues??
+		 *  	Synchronization issues??
 		 *  		When threads are uitilising the same resrouce, e.g. modifing a data structure. 
 		 *  		Errors will occur because changes will happen to the resource in seperate threads!!
 		 *  
 		 *  Extra self review: 
 		 *  	Find out how to resolve these problems theoretically? Hint: There's a key word, synchronization, that helps with one!
 		 * 
-		 * 
+		 * 		Creating a thread using the Thread class vs using Runnable interface (and the advantages and isadvantages)
 		 */
 	}
 
