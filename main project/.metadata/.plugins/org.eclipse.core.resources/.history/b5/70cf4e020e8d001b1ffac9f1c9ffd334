@@ -1,0 +1,96 @@
+package com.app.presentation;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.app.models.BankAccount;
+import com.app.models.Customer;
+import com.app.repository.BankAccountDao;
+import com.app.repository.BankAccountDaoImpl;
+import com.app.repository.CustomerDao;
+import com.app.repository.CustomerDaoImpl;
+import com.app.service.Service;
+
+public class FrontEnd {
+    Service service =new Service();
+    BankAccountDao bDao=new BankAccountDaoImpl();
+    CustomerDao cDao=new CustomerDaoImpl();
+	public void greeting() {
+		System.out.println("-----------------------BANK APP------------------------");
+		System.out.println("Please select are you an employee or a customer or a user?");
+		Scanner sc=new Scanner(System.in);
+		String type=sc.nextLine();
+		
+		switch (type) {
+		
+		case "employee":{
+			System.out.println("Please enter your username :");
+			String employeeUserName=sc.nextLine();
+			System.out.println("Please enter your password :");
+			String employeePassWord=sc.nextLine();
+			if (!service.testEmployeeCredential(employeeUserName, employeePassWord)) {
+				System.out.println("Your password or username doesn't match! ");
+				}
+			else{
+				System.out.println("Welcome to your Account,what do you want to do? ");
+				
+				System.out.println("here's the bank accounts data : ");
+				ArrayList <BankAccount> alb=bDao.sellectAllAccounts();
+				for (BankAccount a:alb) {
+					System.out.println(a.toString());
+					}
+				
+				System.out.println("Here's the customers data : ");
+				ArrayList<Customer> alc=cDao.sellectAllCusstomers();
+				for (Customer c:alc) {
+					System.out.println(c.toString());
+				}
+				boolean status1=true;
+				while(status1) {
+					System.out.println("Do you want to cancel an account or check an couunt ?");
+					String employeeDecision=sc.nextLine();
+					switch(employeeDecision) {
+					case "cancel an account":{
+						System.out.println("Please enter the account id : ");
+						String accountIdString = sc.nextLine();
+						int accountID = Integer.parseInt(accountIdString);
+						bDao.deleteBankAccountById(accountID);
+						break;
+						}
+					case "check an account":{
+						System.out.println("Please enter the account id : ");
+						String accountIdString = sc.nextLine();
+						int accountID = Integer.parseInt(accountIdString);
+						if (bDao.sellectById(accountID)==null) {
+							System.out.println("There is no account with this id");
+						}
+						else {
+						System.out.println(bDao.sellectById(accountID).toString());
+						}
+						break;
+						
+					}
+					}
+					System.out.println("Do you want to continue?");
+					String answer=sc.nextLine();
+					if (answer.equals("no")) {
+						status1=false;}
+					
+				}
+			}
+				
+			break;	
+		}
+			
+			
+
+		default:
+			break;
+		}
+	}
+		
+	   
+
+	}
+
+

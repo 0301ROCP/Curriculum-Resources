@@ -1,0 +1,84 @@
+package com.app.models;
+
+public class Customer {
+	private int id;
+	private String firstName;
+	private String lastName;
+	private boolean loginStatus;
+	private String userName;
+	private String passWord;
+	
+		
+	public Customer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+   
+	
+	
+
+	public Customer(int id, String firstName, String lastName, boolean loginStatus, String userName, String passWord) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.loginStatus = loginStatus;
+		this.userName = userName;
+		this.passWord = passWord;
+	}
+
+
+
+
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public boolean isLoginStatus() {
+		return loginStatus;
+	}
+	public void setLoginStatus(boolean loginStatus) {
+		this.loginStatus = loginStatus;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getPassWord() {
+		return passWord;
+	}
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", loginStatus="
+				+ loginStatus + ", userName=" + userName + ", passWord=" + passWord + "]";
+	}
+	
+	
+	
+	
+	
+	
+
+}

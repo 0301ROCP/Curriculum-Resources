@@ -1,0 +1,5 @@
+package com.app.models;
+
+public class Customer {
+
+}

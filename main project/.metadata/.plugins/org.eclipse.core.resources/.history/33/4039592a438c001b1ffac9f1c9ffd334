@@ -1,0 +1,9 @@
+package com.app.repository;
+
+public interface  BankAccountDao {
+	
+	BankAcount sellectById(int id) {
+		return 
+	}
+
+}

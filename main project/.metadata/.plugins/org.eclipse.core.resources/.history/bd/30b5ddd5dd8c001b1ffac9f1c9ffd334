@@ -1,0 +1,35 @@
+package com.app.presentation;
+
+import java.util.Scanner;
+
+public class FrontEnd {
+
+	public void greeting() {
+		System.out.println("-----------------------BANK APP------------------------");
+		System.out.println("Please select are you an employee or a customer or a user?");
+		Scanner sc=new Scanner(System.in);
+		String type=sc.nextLine();
+		
+		switch (type) {
+		
+		case "employee":{
+			System.out.println("Please enter your username :");
+			String employeeUserName=sc.nextLine();
+			System.out.println("Please enter your password :");
+			String employeePassWord=sc.nextLine();
+			
+			
+		}
+			
+			break;
+
+		default:
+			break;
+		}
+	}
+		
+	   
+
+	}
+
+

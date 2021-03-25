@@ -1,0 +1,55 @@
+package com.app.models;
+
+
+
+public class BankAccount {
+	private int id;
+	private boolean chekingAcount;
+	private boolean  savingAcount;
+	private double balance;
+	
+    public BankAccount() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public BankAccount(int id, boolean chekingAcount, boolean savingAcount, double balance) {
+		super();
+		this.id = id;
+		this.chekingAcount = chekingAcount;
+		this.savingAcount = savingAcount;
+		this.balance = balance;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public boolean isChekingAcount() {
+		return chekingAcount;
+	}
+	public void setChekingAcount(boolean chekingAcount) {
+		this.chekingAcount = chekingAcount;
+	}
+	public boolean isSavingAcount() {
+		return savingAcount;
+	}
+	public void setSavingAcount(boolean savingAcount) {
+		this.savingAcount = savingAcount;
+	}
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	@Override
+	public String toString() {
+		return "BankAcount [id=" + id + ", chekingAcount=" + chekingAcount + ", savingAcount=" + savingAcount
+				+ ", balance=" + balance + "]";
+	}
+	
+	
+	
+
+}

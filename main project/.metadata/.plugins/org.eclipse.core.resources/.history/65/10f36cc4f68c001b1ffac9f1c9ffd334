@@ -1,0 +1,94 @@
+package com.app.repository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.app.models.BankAccount;
+import com.app.utility.ConnectionFactory;
+
+public class BankAccountDaoImpl implements BankAccountDao {
+
+	@Override
+	public BankAccount sellectById(int id) {
+		BankAccount b=null;
+		try(Connection conn=ConnectionFactory.getConnection()){
+				String sql="select * from BankAccount where id=?";
+		        PreparedStatement prs=conn.prepareStatement(sql);
+		        prs.setInt(1, id);
+		        ResultSet rs=prs.executeQuery();
+		        while(rs.next()) {
+		        	 b=new BankAccount(rs.getInt(1), rs.getBoolean(2), rs.getBoolean(3), rs.getInt(4), rs.getInt(5));
+		        }
+		        
+		                		
+		}
+		catch(SQLException e){
+			e.printStackTrace();
+		}
+		return b ;
+	}
+
+	@Override
+	public BankAccount sellectByCustomerId(int customerId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+	@Override
+	public ArrayList<BankAccount> sellectAllAccounts() {
+List<Book> bookList = new ArrayList<>();
+		
+		String sql = "SELECT * FROM books";
+		
+		try(Connection conn = ConnectionFactory.getConnection()) {
+			
+			
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				bookList.add( new Book(
+						rs.getInt("book_id"),
+						rs.getString(2),
+						rs.getString(3),
+						rs.getString(4),
+						rs.getString(5),
+						rs.getInt(6),
+						rs.getBoolean(7),
+						rs.getBoolean(8)
+						));
+			}
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		return bookList;
+	}
+
+}
+		return null;
+	}
+
+	@Override
+	public boolean updateByBalance(BankAccount b, int balance) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean insertBankAccount(BankAccount b) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	 
+
+}

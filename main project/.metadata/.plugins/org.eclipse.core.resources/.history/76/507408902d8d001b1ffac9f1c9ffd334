@@ -1,0 +1,151 @@
+package com.app.presentation;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.app.models.BankAccount;
+import com.app.models.Customer;
+import com.app.repository.BankAccountDao;
+import com.app.repository.BankAccountDaoImpl;
+import com.app.repository.CustomerDao;
+import com.app.repository.CustomerDaoImpl;
+import com.app.service.Service;
+
+public class FrontEnd {
+    Service service =new Service();
+    BankAccountDao bDao=new BankAccountDaoImpl();
+    CustomerDao cDao=new CustomerDaoImpl();
+	public void greeting() {
+		System.out.println("-----------------------BANK APP------------------------");
+		System.out.println("Please select are you an employee or a customer or a user?");
+		Scanner sc=new Scanner(System.in);
+		String type=sc.nextLine();
+		
+		switch (type) {
+		
+		case "employee":{
+			System.out.println("Please enter your username :");
+			String employeeUserName=sc.nextLine();
+			System.out.println("Please enter your password :");
+			String employeePassWord=sc.nextLine();
+			if (!service.testEmployeeCredential(employeeUserName, employeePassWord)) {
+				System.out.println("Your password or username doesn't match! ");
+				}
+			else{
+				System.out.println("Welcome to your Account,what do you want to do? ");
+				
+				System.out.println("here's the bank accounts data : ");
+				ArrayList <BankAccount> alb=bDao.sellectAllAccounts();
+				for (BankAccount a:alb) {
+					System.out.println(a.toString());
+					}
+				
+				System.out.println("Here's the customers data : ");
+				ArrayList<Customer> alc=cDao.sellectAllCusstomers();
+				for (Customer c:alc) {
+					System.out.println(c.toString());
+				}
+				boolean status1=true;
+				while(status1) {
+					System.out.println("Do you want to cancel an account or check an couunt ?");
+					String employeeDecision=sc.nextLine();
+					switch(employeeDecision) {
+					case "cancel an account":{
+						System.out.println("Please enter the account id : ");
+						String accountIdString = sc.nextLine();
+						int accountID = Integer.parseInt(accountIdString);
+						bDao.deleteBankAccountById(accountID);
+						break;
+						}
+					case "check an account":{
+						System.out.println("Please enter the account id : ");
+						String accountIdString = sc.nextLine();
+						int accountID = Integer.parseInt(accountIdString);
+						if (bDao.sellectById(accountID)==null) {
+							System.out.println("There is no account with this id");
+						}
+						else {
+						System.out.println(bDao.sellectById(accountID).toString());
+						}
+						break;
+						
+					}
+					}
+					System.out.println("Do you want to continue?");
+					String answer=sc.nextLine();
+					if (answer.equals("no")) {
+						status1=false;}
+					
+				}
+			}
+				
+			break;	
+		}
+		case "customer":{
+			System.out.println("Please enter your username :");
+			String customerUserName=sc.nextLine();
+			System.out.println("Please enter your password :");
+			String customerPassWord=sc.nextLine();
+			if (!service.testCustomerCredential(customerUserName, customerPassWord)) {
+				System.out.println("Your password or username doesn't match! ");
+				}
+			else{
+				boolean status2=true;
+				while(status2) {
+					System.out.println("Dear Customer Welcome to your account what do you want to do?please select(1-5) 1-check your account 2- withdraw  3-deposite  4-transfer 5-apply for a new account?");
+					String numberString=sc.nextLine();
+					int number = Integer.parseInt(numberString);
+					switch(number) {
+					case 1:{
+						System.out.println("Please enter the account id : ");
+						String accountIdString = sc.nextLine();
+						int accountID = Integer.parseInt(accountIdString);
+						if (bDao.sellectById(accountID)==null) {
+							System.out.println("There is no account with this id");
+						}
+						else {
+						System.out.println(bDao.sellectById(accountID).toString());
+						}
+						break;
+					}
+					case 2:{
+						System.out.println("please enter the account id that you want to withdraw from?");
+						String accountIdString = sc.nextLine();
+						int accountID = Integer.parseInt(accountIdString);
+						System.out.println("How much do you want to withdraw?");
+						String amountdString = sc.nextLine();
+						int amount = Integer.parseInt(amountdString);
+						if(service.withdra(accountID, amount)) {
+							System.out.println("transaction has been done succesfully");
+						}
+						else {
+							System.out.println("transaction failed");
+						}
+						break;
+					}
+					case 3:{
+						System.out.println("please enter the account id that you want to deposite from?");
+						String accountIdString = sc.nextLine();
+						int accountID = Integer.parseInt(accountIdString);
+						System.out.println("How much do you want to withdraw?");
+						String amountdString = sc.nextLine();
+						int amount = Integer.parseInt(amountdString);
+						if(service.withdra(accountID, amount)) {
+							System.out.println("transaction has been done succesfully");
+						}
+						else {
+							System.out.println("transaction failed");
+					}
+					    break;
+					}
+					}
+				
+		}	
+		}
+		}
+	}	
+	}
+			
+
+		
+	

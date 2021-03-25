@@ -1,0 +1,45 @@
+package com.app.presentation;
+
+import java.util.Scanner;
+
+import com.app.service.Service;
+
+public class FrontEnd {
+    Service service =new Service();
+	public void greeting() {
+		System.out.println("-----------------------BANK APP------------------------");
+		System.out.println("Please select are you an employee or a customer or a user?");
+		Scanner sc=new Scanner(System.in);
+		String type=sc.nextLine();
+		
+		switch (type) {
+		
+		case "employee":{
+			System.out.println("Please enter your username :");
+			String employeeUserName=sc.nextLine();
+			System.out.println("Please enter your password :");
+			String employeePassWord=sc.nextLine();
+			if (!service.testEmployeeCredential(employeeUserName, employeePassWord)) {
+				System.out.println("Your password or username doesn't match! ");
+				}
+			else{
+				//boolean status1=true;
+				//while(status1) {}
+				System.out.println("Welcome to your Account,what do you want to do? WITHDRAW ,DEPOSITE,TRANSFER,APPLY FOR NEW ACCOUNT ");
+			}
+				
+			
+		}
+			
+			break;
+
+		default:
+			break;
+		}
+	}
+		
+	   
+
+	}
+
+

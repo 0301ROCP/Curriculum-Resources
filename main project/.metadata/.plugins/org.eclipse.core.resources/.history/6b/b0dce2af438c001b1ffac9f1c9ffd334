@@ -1,0 +1,10 @@
+package com.app.repository;
+
+import com.app.models.BankAccount;
+
+public interface  BankAccountDao {
+	
+	BankAccount sellectById(int id);
+	
+
+}

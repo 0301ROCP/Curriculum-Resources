@@ -1,0 +1,24 @@
+package com.app.service;
+
+import com.app.models.Employee;
+import com.app.repository.EmployeeDao;
+
+public class Service {
+    EmployeeDao eDao;
+	public boolean testEmployeeCredential(String userName,String passWord) {
+		Employee e=eDao.sellectByUserName(userName);
+		if (e==null) {
+			return false;
+			}
+		if(e.getPassW0rd().equals(passWord)) {
+			return true;
+		}
+		return false;	
+		}
+		
+			
+		}		
+	
+	
+	
+

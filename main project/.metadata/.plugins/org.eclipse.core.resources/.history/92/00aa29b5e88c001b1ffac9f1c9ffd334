@@ -1,0 +1,14 @@
+package com.app.repository;
+
+import com.app.models.BankAccount;
+
+public interface  BankAccountDao {
+	
+	BankAccount sellectById(int id);
+	BankAccount sellectByCustomerId(int customerId);
+	
+	boolean  updateByBalance(BankAccount b,int balance);
+	
+	boolean insertBankAccount(BankAccount b);
+
+}
